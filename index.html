@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="style.css"/>
     <title>Document</title>
 </head>
-<body>
-<div class="questions">
-<h1> Question 1 </h1>
-<ul>
-    <li> answer 1 </li>
-    <li> answer 2  </li>
-    <li> answer 3 </li>
-    <li> answer 4 </li>
-</ul>
+
+<body class="question">
+    <main id="top">
+        <h1>Question 1 </h1>
+        <hr /> 
+ 
+    <ul>
+        <li> answer 1 </li>
+        <li> answer 2  </li>
+        <li> answer 3 </li>
+        <li> answer 4 </li>
+    </ul>
 
     <h1 class ="time" style ="text-align:center;"></h1>
     <div id="main"></div>
@@ -23,11 +26,14 @@
 
 </div>
 
-<a href="startquiz">
-<button type="button">Click Me To Start!</button>
+<a class="startQuiz">
+    <button id="start-button" class="btn-info">Click Me To Start!</button>
 </a>
 
-<script src= "./script.js" ></script>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>
 </html>
 

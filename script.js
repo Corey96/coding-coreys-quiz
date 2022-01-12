@@ -22,8 +22,9 @@ THEN I can save my initials and my score
 
 // selects element by class
 var timeEl = document.querySelector(".time")
+const mainEl = $("main")
+const startQ = $("startQuiz")
 
-var mainEl =document.getElementById("main")
 var secondsLeft = 60;
 
 function setTime() {
@@ -42,11 +43,22 @@ function setTime() {
     }, 1000);
 }
 
+function startQuiz() {
+    timeEl.textContent =" ";
+    var question1 = 
+
+
+
+
+
+
+}
+
 var score = 0;
 for (var i=0; i < questions.length; i++)
     var response = window.prompt()
 
 
-<button onclick ="button()">Click Me To Start</button>
+
 
 object.addEventListener("click", myScript);
