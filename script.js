@@ -20,45 +20,57 @@ THEN I can save my initials and my score
 
 */
 
-// selects element by class
-var timeEl = document.querySelector(".time")
+
+
+const startingMinutes = 5;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById("countdown")
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    countdownEl.innerHTML = `${minutes}:${seconds}`; 
+    time--;
+}
+
+
+
+
+
+
+
+
+
+
+/* selects element by class
+var timeEl = $(".time")
 const mainEl = $("main")
-const startQ = $("startQuiz")
+const startQ = $(".startQuiz")
+let startB = $("start-button")
 
 var secondsLeft = 60;
 
-function setTime() {
-    // Sets interval in variable
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft + " Time Till End";
+$(startB).addEventListener("click", function() {
+    console.log("button clicked")
 
-        if(secondsLeft === 0) [
-            // Stops execution of action at set interval
-            clearInterval(timerInterval),
-            // Calls function to create and append image
-            sendMessage(),
-        ]
+    let timerInterval = setInterval(function function1(){
+    $("") = secondsLeft + " " + "Time left";
 
+    secondsLeft -=1;
+    if (secondsLeft <=0){
+        clearInterval(timerInterval);
+        $("") = "Time is up!"
+        
+    }
     }, 1000);
-}
+});
 
-function startQuiz() {
-    timeEl.textContent =" ";
-    var question1 = 
-
-
-
-
-
-
-}
-
-var score = 0;
+/* var score = 0;
 for (var i=0; i < questions.length; i++)
-    var response = window.prompt()
-
-
-
-
-object.addEventListener("click", myScript);
+    var response = window.prompt() */
