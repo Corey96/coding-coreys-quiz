@@ -37,14 +37,21 @@ function updateCountdown() {
 
     countdownEl.innerHTML = `${minutes}:${seconds}`; 
     time--;
+
+    if(startingMinutes <= 0){
+        clearInterval(updateCountdown);
+        document.getElementById("countdown").innerHTML = "Time is up!"
+      }
 }
 
 
 
 
 
+document.getElementById("start-button").addEventListener("click", function(event) {
+    console.log("button clicked")
 
-
+})
 
 
 
