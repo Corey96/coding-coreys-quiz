@@ -72,3 +72,17 @@ box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
 transition: transform 150ms;
 transform: scale(1.03);
 }
+
+.btn[disabled]:hover {
+cursor: not-allowed;
+box-shadow: none;
+transform: none;
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(185, 99, 65) 0%, rgb(216, 149, 86) 100%)
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(209, 131, 58)
+}
