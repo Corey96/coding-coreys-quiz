@@ -21,14 +21,13 @@ THEN I can save my initials and my score
 */
 
 
-
-const startingMinutes = 5;
+const countdownEl = document.getElementById("countdown")
+const startingMinutes = 0.10;
 let time = startingMinutes * 60;
 
-const countdownEl = document.getElementById("countdown")
 
 setInterval(updateCountdown, 1000);
-
+// Countdown timer
 function updateCountdown() {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
@@ -39,7 +38,7 @@ function updateCountdown() {
     time--;
 
     if(startingMinutes <= 0){
-        clearInterval(updateCountdown);
+        clearInterval(countdownEl);
         document.getElementById("countdown").innerHTML = "Time is up!"
       }
 }
@@ -50,10 +49,17 @@ function updateCountdown() {
 
 document.getElementById("start-button").addEventListener("click", function(event) {
     console.log("button clicked")
+    
+
 
 })
 
+function startQuiz() {
+    if ("start-button");
+console.log ('started quiz') 
 
+
+}
 
 /* selects element by class
 var timeEl = $(".time")
