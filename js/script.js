@@ -47,19 +47,7 @@ function updateCountdown() {
 
 
 
-document.getElementById("start-button").addEventListener("click", function(event) {
-    console.log("button clicked")
-    
 
-
-})
-
-function startQuiz() {
-    if ("start-button");
-console.log ('started quiz') 
-
-
-}
 
 /* selects element by class
 var timeEl = $(".time")
