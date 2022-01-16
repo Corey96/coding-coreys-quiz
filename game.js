@@ -3,6 +3,7 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 
+
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
@@ -15,37 +16,34 @@ let questions = [
         choice1: '2',
         choice2: '4',
         choice3: '21',
-        choice4: '5',
-        answer: 4,
-
-},
-{
-        question: 'What is 2 + 5?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '5',
-        answer: 5,
-
-},
-{
-        question: 'What is 21 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '5',
-        answer: 21,
-
-},
-{
-        question: 'What is 0 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '5',
-        answer: 0,
-
-}
+        choice4: '17',
+        answer: 2,
+    },
+    {
+        question:
+            "The tallest building in the world is located in which city?",
+        choice1: "Dubai",
+        choice2: "New York",
+        choice3: "Shanghai",
+        choice4: "None of the above",
+        answer: 1,
+    },
+    {
+        question: "What percent of American adults believe that chocolate milk comes from brown cows?",
+        choice1: "20%",
+        choice2: "18%",
+        choice3: "7%",
+        choice4: "33%",
+        answer: 3,
+    },
+    {
+        question: "Approximately what percent of U.S. power outages are caused by squirrels?",
+        choice1: "10-20%",
+        choice2: "5-10%",
+        choice3: "15-20%",
+        choice4: "30%-40%",
+        answer: 1,
+    }
 ]
 
 const SCORE_POINTS = 100
@@ -67,7 +65,8 @@ getNewQuestion = () => {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
@@ -85,27 +84,25 @@ getNewQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
-    
 
-    acceptingAnswers = false
-    const selectedChoice = e.target
-    const selectedAnswer = selectedChoice.dataset['number']
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset['number']
 
-    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
-    'incorrect'
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
-    if(classToApply === 'correct') {
-        increment(SCORE_POINTS)
-    }
+        if(classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        }
 
-    selectedChoice.parentElement.classList.add(classToApply)
+        selectedChoice.parentElement.classList.add(classToApply)
 
-    setTimeout(() => {
-        selectedChoice.parentElement.classList.remove(classToApply)
-        getNewQuestion()
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
 
-    }, 1000)
-})
+        }, 1000)
+    })
 })
 
 incrementScore = num => {
