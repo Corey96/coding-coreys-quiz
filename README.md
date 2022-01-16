@@ -15,5 +15,5 @@ See below for gif of the site:
 
 
 
-Deployed application URL:      
-Github repository URL: 
+Deployed application URL: https://corey96.github.io/coding-coreys-quiz/     
+Github repository URL: https://github.com/Corey96/coding-coreys-quiz
