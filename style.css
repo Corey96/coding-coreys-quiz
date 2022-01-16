@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 
 :root {
@@ -11,7 +10,7 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family:'Gloria Hallelujah', serif;
+    font-family:'Bubblegum Sans', cursive;
 }
 
 h1 {
@@ -66,13 +65,13 @@ h2 {
     margin-top: 1rem;
     text-decoration: none;
     color: black;
-    background: linear-gradient(90deg, rgba(18, 92, 255) 0%, rgb(0, 102, 255) 100%);
+    background: linear-gradient(90deg, rgb(73, 62, 226) 0%, rgb(28, 8, 211) 100%);
     border-radius: 4px;
 }
 
 .btn:hover {
 cursor: pointer;
-box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
 transition: transform 150ms;
 transform: scale(1.03);
 }
@@ -84,11 +83,11 @@ transform: none;
 }
 
 #highscore-btn {
-    background: linear-gradient(90deg, rgb(185, 99, 65) 0%, rgb(216, 149, 86) 100%)
+    background: linear-gradient(90deg, rgb(90, 25, 85) 0%, rgb(212, 9, 9) 100%)
 }
 
 #highscore-btn:hover {
-    box-shadow: 0 0.4rem 1.4rem 0 rgb(209, 131, 58)
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(59, 6, 95)
 }
 
 /* End Page CSS */
