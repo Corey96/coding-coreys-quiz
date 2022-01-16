@@ -12,37 +12,37 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
+        question: "How would you link a HTML page to Javascript?",
+        choice1: 'script.js',
+        choice2: 'java.script',
+        choice3: 'js.javascript',
+        choice4: 'html.js',
+        answer: 1,
     },
     {
         question:
-            "The tallest building in the world is located in which city?",
-        choice1: "Dubai",
-        choice2: "New York",
-        choice3: "Shanghai",
-        choice4: "None of the above",
+            "How do you write 'Hello World' in an alert box?",
+        choice1: "msg('Hello World')",
+        choice2: "alertBox('Hello World')",
+        choice3: "msgBox('Hello World')",
+        choice4: "alert('Hello World')",
+        answer: 4,
+    },
+    {
+        question: "How would you write an IF statement in JavaScript?",
+        choice1: "if(i == 5)",
+        choice2: "if i = 5 then",
+        choice3: "if i = 5",
+        choice4: "if i == 5 then",
         answer: 1,
     },
     {
-        question: "What percent of American adults believe that chocolate milk comes from brown cows?",
-        choice1: "20%",
-        choice2: "18%",
-        choice3: "7%",
-        choice4: "33%",
+        question: "What is the correct way to write a Javascript array?",
+        choice1: "var colors = (1:'red,2:'green' 3:'blue')",
+        choice2: "var colours = 'red', 'green', 'blue'",
+        choice3: "var colors = ['red', 'green', 'blue']",
+        choice4: "var colors = 1 = ('red'), 2 = ('green') 3 = ('blue')",
         answer: 3,
-    },
-    {
-        question: "Approximately what percent of U.S. power outages are caused by squirrels?",
-        choice1: "10-20%",
-        choice2: "5-10%",
-        choice3: "15-20%",
-        choice4: "30%-40%",
-        answer: 1,
     }
 ]
 
